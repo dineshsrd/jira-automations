@@ -18,12 +18,12 @@ public class CreateRORSubtasks {
 
 	static List subTasks = new ArrayList<>() {{
 		add("Backlog Refinement");
-//		add("Coding");
-//		add("Code Review");
-//		add("CSS Review");
-//		add("Testing");
-//		add("Scheduled");
-//		add("Monitoring");
+		add("Coding");
+		add("Code Review");
+		add("CSS Review");
+		add("Testing");
+		add("Scheduled");
+		add("Monitoring");
 	}};
 
 
