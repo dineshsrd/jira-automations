@@ -28,7 +28,7 @@ bin/
 ### Mac OS ###
 .DS_Store
 
-/resources/
+/resources/*
 ticket-data.jar
 ticketIds.txt
 JIRA.iml
