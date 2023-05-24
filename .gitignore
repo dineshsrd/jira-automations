@@ -32,4 +32,5 @@ bin/
 ticket-data.jar
 ticketIds.txt
 JIRA.iml
+jira-automations.iml
 .idea
