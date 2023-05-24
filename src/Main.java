@@ -18,9 +18,6 @@ public class Main {
 	}
 
 	public static void mainTask(){
-		String key = "ATATT3xFfGF0hYALxe-kHUhaaIDSX5dfK-htLGdymYFaBnaZdlmpcRfTjWEdKxOnHSRkbxykYxGjB4T7Mffkw1DFQWBP9t1ql201BdVWrrT-IKtr8i2HKORMS0-0Vdq2CMXWbkAnOx7JU_M7n7RG3hLCAwgKOUnQ7n6RxGrKcWXq7k0Ly_iYR9s=2CFFA1C5";
-		String email = "dinesh.r@commerceiq.ai";
-		String url = "https://efundamentals.atlassian.net/rest/api/3/issue/";
 
 		String encodedApiKey = "ZGluZXNoLnJAY29tbWVyY2VpcS5haTpBVEFUVDN4RmZHRjBoWUFMeGUta0hVaGFhSURTWDVkZkstaHRMR2R5bVlGYUJuYVpkbG1wY1JmVGpXRWRLeE9uSFNSa2J4eWtZeEdqQjRUN01mZmt3MURGUVdCUDl0MXFsMjAxQmRWV3JyVC1JS3RyOGkySEtPUk1TMC0wVmRxMkNNWFdia0FuT3g3SlVfTTduN1JHM2hMQ0F3Z0tPVW5RN242UnhHcktjV1hxN2swTHlfaVlSOXM9MkNGRkExQzU=";
 
