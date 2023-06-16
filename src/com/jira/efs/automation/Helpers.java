@@ -1,30 +1,22 @@
 package com.jira.efs.automation;
 
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Properties;
+
+import org.json.JSONObject;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 import okhttp3.RequestBody;
 
-public class Helpers {
+import static com.jira.efs.automation.AutomationRunner.applicationProps;
+import static com.jira.efs.automation.AutomationRunner.configJson;
 
-	private static Properties applicationProps =new Properties();
-	static {
-		try {
-			FileInputStream inputStream= new FileInputStream("./resources/config.properties");
-			applicationProps.load(inputStream);
-		}
-		catch(Exception e) {
-			throw new RuntimeException(e);
-		}
-	}
+public class Helpers {
 
 	private static final String encodedApiKey = (String) applicationProps.getOrDefault("base64AuthKey", "provideValidBase64EncodedToken");
 
-	public static void doPostAPICall(String apiUrl, RequestBody body)
+	public static JSONObject doPostAPICall(String apiUrl, RequestBody body)
 		throws IOException {
 		OkHttpClient client = new OkHttpClient().newBuilder()
 			.build();
@@ -35,7 +27,9 @@ public class Helpers {
 			.addHeader("Authorization", "Basic "+encodedApiKey)
 			.build();
 		Response response = client.newCall(request).execute();
-		System.out.println(response.message());
+		String rezp = response.body().string();
+		JSONObject responseJson = new JSONObject(rezp);
+		return responseJson;
 	}
 
 	public static void doGetAPICall(String apiUrl, RequestBody body)
